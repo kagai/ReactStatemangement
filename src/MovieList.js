@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React, { useState ,useContext} from "react";
 import Movie from './Movie';
+import {MovieContext} from './MovieContext'
 
 
 const MovieList = () =>{
-    
+    const value = useContext(MovieContext)
     return(
-        <div>{movies.map((movie)=>(
-            <li>{movie.name}</li>
-        ))}</div>
+        <div>
+            {value}
+        </div>
        
     );
 }
