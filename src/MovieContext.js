@@ -19,11 +19,16 @@ export const MovieProvider = (props) =>{
             name:'Inception',
             price:'$10',
             id: 23524
+        },
+        {
+            name:'Bad Boys for life ',
+            price:'$10',
+            id: 23525
         }
     ]);
 
     return (
-     <MovieContext.Provider value={'Hello'}>
+     <MovieContext.Provider value={[movies,setMovies]}>
          {props.children}
      </MovieContext.Provider>
     );
